@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<title>复数 = =</title>
+</head>
+<body>
+
+<script type="text/javascript">
+
+
+function DaiZhuanJi()
+{
+	x=0;
+	xi=0;
+	x=document.getElementById("shizhi").value;
+	xi=document.getElementById("xuzhi").value;
+	mo=Math.sqrt(x*x+xi*xi);
+	jiao=Math.atan(xi/x)/Math.acos(-1)*180;
+	document.write(mo+"∠"+jiao+"°");
+}
+
+function JiZhuanDai(a,b)
+{	a=0;
+	b=0;
+	a=document.getElementById("mozhi").value;
+	b=document.getElementById("jiaozhi").value;
+	shi=a*Math.cos(b/180*Math.acos(-1));
+	xu=a*Math.sin(b/180*Math.acos(-1));
+	document.write(shi+"+"+xu+"i");
+}
+
+
+
+
+
+
+
+</script>
+
+<input type = "number" name="shi" id="shizhi">+<input type = "number" name="xu" id="xuzhi">i
+
+<button onclick="DaiZhuanJi()">=></button>
+
+<br/>
+
+<input type = "number" name="mo" id="mozhi">∠<input type = "jiao" name="xu" id="jiaozhi">°
+
+<button onclick="JiZhuanDai()">=></button>
+
+</body>
+</html>
